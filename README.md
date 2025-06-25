@@ -1,136 +1,259 @@
-# 🎨 Color Correction by Lucas
+🎨 Color Correction by Lucas
 
-Um nó personalizado para ComfyUI que oferece controles avançados de correção de cores, ruído e desfoque.
+A custom ComfyUI node that offers advanced controls for color correction, noise, and blur.
 
-## ✨ Funcionalidades
+✨ Features
 
-Este nó permite ajustar os seguintes parâmetros de uma imagem:
+This node allows you to adjust the following parameters of an image:
 
-- 🌈 **Hue (Matiz)**: Ajusta a tonalidade das cores (-180° a +180°)
-- 💧 **Saturation (Saturação)**: Controla a intensidade das cores (0 a 3x)
-- 💡 **Brightness (Brilho)**: Ajusta o brilho geral da imagem (0 a 3x)
-- 🔆 **Contrast (Contraste)**: Controla a diferença entre áreas claras e escuras (0 a 3x)
-- ⚡ **Gamma**: Ajusta o brilho dos tons médios (0.1 a 3.0)
-- 📺 **Noise (Ruído)**: Adiciona ruído aleatório à imagem (0 a 1)
-- 🌫️ **Blur (Desfoque)**: Aplica desfoque gaussiano (0 a 10 pixels)
+•
+🌈 Hue: Adjusts the color tone (-180° to +180°)
 
-## 📦 Instalação
+•
+💧 Saturation: Controls the intensity of colors (0 to 3x)
 
-### Método 1: Instalação Manual
+•
+💡 Brightness: Adjusts the overall image brightness (0 to 3x)
 
-1. Baixe o arquivo `color_correction_by_lucas.zip`
-2. Extraia o conteúdo na pasta `custom_nodes` do seu ComfyUI:
-   ```
-   ComfyUI/custom_nodes/color_correction_by_lucas/
-   ```
-3. Reinicie o ComfyUI
+•
+🔆 Contrast: Controls the difference between light and dark areas (0 to 3x)
 
-### Método 2: Via ComfyUI Manager (se disponível)
+•
+⚡ Gamma: Adjusts mid-tone brightness (0.1 to 3.0)
 
-1. Abra o ComfyUI Manager
-2. Procure por "Color Correction by Lucas"
-3. Clique em "Install"
-4. Reinicie o ComfyUI
+•
+📺 Noise: Adds random noise to the image (0 to 1)
 
-## 🚀 Como Usar
+•
+🌫️ Blur: Applies Gaussian blur (0 to 10 pixels)
 
-1. No ComfyUI, procure por "Color Correction by Lucas" na categoria `image/color`
-2. Adicione o nó ao seu workflow
-3. Conecte uma imagem à entrada do nó
-4. Ajuste os parâmetros usando os sliders:
-   - **Hue**: Valores negativos movem para o vermelho, positivos para o azul
-   - **Saturation**: 0 = preto e branco, 1 = normal, >1 = mais saturado
-   - **Brightness**: 0 = preto, 1 = normal, >1 = mais brilhante
-   - **Contrast**: 0 = cinza uniforme, 1 = normal, >1 = mais contraste
-   - **Gamma**: <1 = mais escuro, 1 = normal, >1 = mais claro
-   - **Noise**: 0 = sem ruído, >0 = adiciona ruído aleatório
-   - **Blur**: 0 = sem desfoque, >0 = aplica desfoque gaussiano
-5. A imagem corrigida será disponibilizada na saída
+📦 Installation
 
-## 🎯 Presets Incluídos
+Method 1: Manual Installation
 
-O nó inclui presets pré-configurados acessíveis via menu do botão direito:
+1.
+Download the color_correction_by_lucas.zip file.
 
-- **🔄 Reset All Values**: Restaura todos os valores padrão
-- **🎯 Enhance Colors**: Melhora cores e contraste
-- **🌙 Vintage Look**: Aplica um visual vintage com ruído e desfoque sutil
+2.
+Extract its contents into your ComfyUI's custom_nodes folder:
 
-## 🎨 Interface Visual
+3.
+Restart ComfyUI.
 
-- **Sliders Coloridos**: Interface visual aprimorada com gradientes
-- **Ícones Visuais**: Cada parâmetro tem um ícone identificador
-- **Menu Contextual**: Acesso rápido a presets e informações
-- **Assinatura do Autor**: "by Lucas" visível no nó
+Method 2: Via ComfyUI Manager (if available)
 
-## 🔧 Funcionalidades da Interface
+1.
+Open ComfyUI Manager.
 
-- **Reset All Values**: Clique com o botão direito no nó e selecione "🔄 Reset All Values"
-- **About**: Clique com o botão direito e selecione "ℹ️ About Color Correction"
-- **Presets**: Acesse configurações pré-definidas via menu contextual
+2.
+Search for "Color Correction by Lucas".
 
-## 📋 Requisitos
+3.
+Click "Install".
 
-- ComfyUI
-- Python 3.8+
-- PyTorch 2.0+
-- PIL (Pillow)
-- OpenCV (cv2)
-- NumPy
+4.
+Restart ComfyUI.
 
-## 🐛 Solução de Problemas
+🚀 How to Use
 
-### O nó não aparece na lista
-- Verifique se a pasta foi extraída corretamente em `custom_nodes`
-- Reinicie completamente o ComfyUI
-- Verifique o console para mensagens de erro
+1.
+In ComfyUI, search for "Color Correction by Lucas" in the image/color category.
 
-### Erro "module 'cv2' has no attribute..."
-- Instale o OpenCV: `python -m pip install opencv-python`
-- Use o Python específico do ComfyUI para instalação
+2.
+Add the node to your workflow.
 
-### Performance lenta
-- Para imagens muito grandes, considere redimensionar antes da correção
-- Ajustes de gamma e blur podem ser mais lentos em imagens de alta resolução
+3.
+Connect an image to the node's input.
 
-## 💡 Dicas de Uso
+4.
+Adjust the parameters using the sliders:
 
-- **Para fotos escuras**: Aumente brightness e ajuste gamma
-- **Para fotos desbotadas**: Aumente contrast e saturation
-- **Para correção de cor**: Ajuste hue sutilmente
-- **Para efeitos artísticos**: Combine múltiplos ajustes
-- **Para look vintage**: Use o preset "Vintage Look" ou ajuste manualmente noise e blur
+•
+Hue: Negative values shift towards red, positive towards blue.
 
-## 📝 Changelog
+•
+Saturation: 0 = black and white, 1 = normal, >1 = more saturated.
 
-### v1.0.0
-- Lançamento inicial
-- Suporte para HUE, Saturation, Brightness, Contrast, Gamma, Noise e Blur
-- Interface visual personalizada com sliders coloridos
-- Presets pré-configurados
-- Suporte para processamento em lote
+•
+Brightness: 0 = black, 1 = normal, >1 = brighter.
 
-## 👨‍💻 Autor
+•
+Contrast: 0 = uniform gray, 1 = normal, >1 = more contrast.
 
-Criado com ❤️ por **Lucas**
+•
+Gamma: <1 = darker, 1 = normal, >1 = lighter.
 
-## 📄 Licença
+•
+Noise: 0 = no noise, >0 = adds random noise.
 
-Este projeto é distribuído sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+•
+Blur: 0 = no blur, >0 = applies Gaussian blur.
 
-## 🤝 Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para:
-- Reportar bugs
-- Sugerir novas funcionalidades
-- Enviar pull requests
 
-## 📞 Suporte
+5.
+The corrected image will be available at the output.
 
-Se você encontrar algum problema ou tiver dúvidas, por favor:
-1. Verifique a seção de solução de problemas acima
-2. Procure por issues similares no repositório
-3. Crie uma nova issue com detalhes do problema
+🎯 Included Presets
 
----
+The node includes pre-configured presets accessible via the right-click context menu:
 
-**Aproveite a correção de cores! 🎨**
+•
+🔄 Reset All Values: Restores all parameters to their default values.
+
+•
+🎯 Enhance Colors: Improves colors and contrast.
+
+•
+🌙 Vintage Look: Applies a subtle vintage look with noise and blur.
+
+🎨 Visual Interface
+
+•
+Colorful Sliders: Enhanced visual interface with gradients.
+
+•
+Visual Icons: Each parameter has an identifying icon.
+
+•
+Context Menu: Quick access to presets and information.
+
+•
+Author Signature: "by Lucas" visible on the node.
+
+🔧 Interface Features
+
+•
+Reset All Values: Right-click on the node and select "🔄 Reset All Values".
+
+•
+About: Right-click and select "ℹ️ About Color Correction".
+
+•
+Presets: Access pre-defined settings via the context menu.
+
+📋 Requirements
+
+•
+ComfyUI
+
+•
+Python 3.8+
+
+•
+PyTorch 2.0+
+
+•
+PIL (Pillow)
+
+•
+OpenCV (cv2)
+
+•
+NumPy
+
+🐛 Troubleshooting
+
+Node does not appear in the list
+
+•
+Verify that the folder was extracted correctly into custom_nodes.
+
+•
+Fully restart ComfyUI.
+
+•
+Check the console for error messages.
+
+Error "module 'cv2' has no attribute..."
+
+•
+Install OpenCV: python -m pip install opencv-python.
+
+•
+Use the specific Python environment of ComfyUI for installation.
+
+Slow performance
+
+•
+For very large images, consider resizing before correction.
+
+•
+Gamma and blur adjustments might be slower on high-resolution images.
+
+💡 Usage Tips
+
+•
+For dark photos: Increase brightness and adjust gamma.
+
+•
+For faded photos: Increase contrast and saturation.
+
+•
+For color correction: Adjust hue subtly.
+
+•
+For artistic effects: Combine multiple adjustments.
+
+•
+For vintage look: Use the "Vintage Look" preset or manually adjust noise and blur.
+
+📝 Changelog
+
+v1.0.0
+
+•
+Initial release.
+
+•
+Support for HUE, Saturation, Brightness, Contrast, Gamma, Noise, and Blur.
+
+•
+Custom visual interface with colorful sliders.
+
+•
+Pre-configured presets.
+
+•
+Batch processing support.
+
+👨‍💻 Author
+
+Created with ❤️ by Lucas
+
+📄 License
+
+This project is distributed under the MIT License. See the LICENSE file for more details.
+
+🤝 Contributions
+
+Contributions are welcome! Feel free to:
+
+•
+Report bugs
+
+•
+Suggest new features
+
+•
+Submit pull requests
+
+📞 Support
+
+If you encounter any issues or have questions, please:
+
+1.
+Check the troubleshooting section above.
+
+2.
+Look for similar issues in the repository.
+
+3.
+Create a new issue with problem details.
+
+
+
+
+
+Enjoy color correcting! 🎨
+

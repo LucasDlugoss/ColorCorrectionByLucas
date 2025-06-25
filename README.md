@@ -1,4 +1,4 @@
-🎨 Color Correction by Lucas
+🎨 Color Correction by Lucas to Comfy UI
 
 A custom ComfyUI node that offers advanced controls for color correction, noise, and blur.
 
